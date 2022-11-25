@@ -1,9 +1,5 @@
 #!bin/bash
 
-read rootAnswear
-
-if [ \"$rootAnswear\"=="S" ]
-
 echo \"Would you like to update and upgrade your machine? S/n\"
 
 read upAnswear
