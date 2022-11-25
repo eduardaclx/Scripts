@@ -31,7 +31,6 @@ then
 fi
 
 nodejs --version
-
 if [ $? -eq 1 ]
 then
         sudo apt install nodejs -y
@@ -41,7 +40,6 @@ then
 fi
 
 npm --version
-
 if [ $? -eq 1 ]
 then
         sudo apt install npm -y
@@ -51,7 +49,6 @@ then
 fi
 
 docker --version
-
 if [ $? -eq 1 ]
 then
         sudo apt install docker.io -y -q
