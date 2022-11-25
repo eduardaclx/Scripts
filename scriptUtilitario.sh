@@ -30,27 +30,34 @@ then
         sudo passwd ubuntu
 fi
 
-nodejs --version
-if [ $? -eq 1 ]
+echo \"Would you like to install/upgrade NodeJs? S/n\"
+
+read nodeAnswear
+
+if [ \"$nodeAnswear\"=="S" ]
 then
         sudo apt install nodejs -y
 
-        echo "NodeJs installed"
+        echo "NodeJs installed/updated"
         echo ""
 fi
 
-npm --version
-if [ $? -eq 1 ]
-then
+echo \"Would you like to install/upgrade NPM? S/n\"
+
+read npmAnswear
+
+if [ \"$npmAnswear\"=="S" ]
         sudo apt install npm -y
 
-        echo "NPM installed"
+        echo "NPM installed/updated"
         echo ""
 fi
 
-docker --version
-if [ $? -eq 1 ]
-then
+echo \"Would you like to install/upgrade Docker? S/n\"
+
+read dockerAnswear
+
+if [ \"$dockerAnswear\"=="S" ]
         sudo apt install docker.io -y -q
 
         sudo systemctl enable docker
