@@ -55,7 +55,6 @@ then
 fi
 
 docker --version
-docker --version
 
 if [ $? -eq 1 ]
 then
