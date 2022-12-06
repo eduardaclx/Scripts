@@ -95,7 +95,7 @@ then
 
         clear
         
-        echo \"Java $javaAnswear installed\"
+        echo \"Java $version installed\"
 fi
 
 echo \"Would you like to install GUI? s/n\"
