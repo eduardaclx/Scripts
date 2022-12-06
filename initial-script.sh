@@ -8,8 +8,10 @@ if [ \"$upAnswear\"=="S" ]
 then
         sudo apt update && sudo apt upgrade -y -q
 
+        clear
+        
         echo "Upgrade complete!"
-        echo ""
+        
 fi
 
 echo \"Would you like to change your root password? S/n\"
@@ -38,8 +40,10 @@ if [ \"$nodeAnswear\"=="S" ]
 then
         sudo apt install nodejs -y
 
-        echo "NodeJs installed/updated"
-        echo ""
+        clear
+        
+        echo \"NodeJs installed/updated\"
+        
 fi
 
 echo \"Would you like to install/upgrade NPM? S/n\"
@@ -49,8 +53,10 @@ read npmAnswear
 if [ \"$npmAnswear\"=="S" ]
         sudo apt install npm -y
 
-        echo "NPM installed/updated"
-        echo ""
+        clear
+        
+        echo \"NPM installed/updated\"
+        
 fi
 
 echo \"Would you like to install/upgrade Docker? S/n\"
@@ -64,8 +70,9 @@ if [ \"$dockerAnswear\"=="S" ]
 
         sudo systemctl start docker
 
-        echo "Docker installed (we already enabled and started)"
-        echo ""
+        clear
+        
+        echo \"Docker installed (we already enabled and started)\"
 fi
 
 echo \"Would you like to install java? S/n\"
@@ -81,7 +88,9 @@ then
 
         sudo apt install openjdk-$version-jdk -y -q
 
-        echo "Java $javaAnswear installed"
+        clear
+        
+        echo \"Java $javaAnswear installed\"
 fi
 
 echo \"Would you like to install GUI? S/n\"
@@ -93,5 +102,8 @@ if [ \"$guiAnswear\"=="S" ]
 then
         sudo apt-get install xrdp lxde-core lxde tigervnc-standalone-server -y -q
 
-        echo "GUI installed"
+        clear
+        
+        echo \"GUI installed\"
+        
 fi
