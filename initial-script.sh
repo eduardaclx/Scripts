@@ -1,10 +1,10 @@
 #!bin/bash
 
-echo \"Would you like to update and upgrade your machine? S/n\"
+echo \"Would you like to update and upgrade your machine? s/n\"
 
 read upAnswear
 
-if [ \"$upAnswear\"=="S" ]
+if [ \"$upAnswear\" == \"s\" ]
 then
         sudo apt update && sudo apt upgrade -y -q
 
@@ -14,11 +14,11 @@ then
         
 fi
 
-echo \"Would you like to change your root password? S/n\"
+echo \"Would you like to change your root password? s/n\"
 
 read rootAnswear
 
-if [ \"$rootAnswear\"=="S" ]
+if [ \"$rootAnswear\" == \"s\" ]
 then
         sudo passwd root
 fi
@@ -27,16 +27,16 @@ echo \"Would you like to change your ubuntu password? S/n\"
 
 read ubuntuAnswear
 
-if [ \"$ubuntuAnswear\"=="S" ]
+if [ \"$ubuntuAnswear\" == \"s\" ]
 then
         sudo passwd ubuntu
 fi
 
-echo \"Would you like to install/upgrade NodeJs? S/n\"
+echo \"Would you like to install/upgrade NodeJs? s/n\"
 
 read nodeAnswear
 
-if [ \"$nodeAnswear\"=="S" ]
+if [ \"$nodeAnswear\" == \"s\" ]
 then
         sudo apt install nodejs -y
 
@@ -46,12 +46,14 @@ then
         
 fi
 
-echo \"Would you like to install/upgrade NPM? S/n\"
+echo \"Would you like to install/upgrade NPM? s/n\"
 
 read npmAnswear
 
-if [ \"$npmAnswear\"=="S" ]
-        sudo apt install npm -y
+if [ \"$npmAnswear\" == \"s\" ]
+
+then
+	sudo apt install npm -y
 
         clear
         
@@ -59,12 +61,15 @@ if [ \"$npmAnswear\"=="S" ]
         
 fi
 
-echo \"Would you like to install/upgrade Docker? S/n\"
+echo \"Would you like to install/upgrade Docker? s/n\"
 
 read dockerAnswear
 
-if [ \"$dockerAnswear\"=="S" ]
-        sudo apt install docker.io -y -q
+if [ \"$dockerAnswear\" == \"s\" ]
+
+then
+
+	sudo apt install docker.io -y -q
 
         sudo systemctl enable docker
 
@@ -72,14 +77,14 @@ if [ \"$dockerAnswear\"=="S" ]
 
         clear
         
-        echo \"Docker installed (we already enabled and started)\"
+        echo \"Docker installed - we already enabled and started -\"
 fi
 
-echo \"Would you like to install java? S/n\"
+echo \"Would you like to install java? s/n\"
 
 read javaAnswear
 
-if [ \"$javaAnswear\"=="S" ]
+if [ \"$javaAnswear\" == \"s\" ]
 
 then
         echo \"Which java version do you want?\"
@@ -93,11 +98,11 @@ then
         echo \"Java $javaAnswear installed\"
 fi
 
-echo \"Would you like to install GUI? S/n\"
+echo \"Would you like to install GUI? s/n\"
 
 read guiAnswear
 
-if [ \"$guiAnswear\"=="S" ]
+if [ \"$guiAnswear\" == \"s\" ]
 
 then
         sudo apt-get install xrdp lxde-core lxde tigervnc-standalone-server -y -q
