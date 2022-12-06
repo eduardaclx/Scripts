@@ -23,7 +23,7 @@ then
         sudo passwd root
 fi
 
-echo \"Would you like to change your ubuntu password? S/n\"
+echo \"Would you like to change your ubuntu password? s/n\"
 
 read ubuntuAnswear
 
