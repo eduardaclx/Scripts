@@ -6,7 +6,7 @@ read upAnswear
 
 if [ \"$upAnswear\" == \"s\" ]
 then
-        sudo apt update && sudo apt upgrade -y -q
+        sudo apt update && sudo apt upgrade -y
 
         clear
         
@@ -69,7 +69,7 @@ if [ \"$dockerAnswear\" == \"s\" ]
 
 then
 
-	sudo apt install docker.io -y -q
+	sudo apt install docker.io -y
 
         sudo systemctl enable docker
 
@@ -91,7 +91,7 @@ then
 
         read version
 
-        sudo apt install openjdk-$version-jdk -y -q
+        sudo apt install openjdk-$version-jdk -y
 
         clear
         
@@ -105,7 +105,7 @@ read guiAnswear
 if [ \"$guiAnswear\" == \"s\" ]
 
 then
-        sudo apt-get install xrdp lxde-core lxde tigervnc-standalone-server -y -q
+        sudo apt-get install xrdp lxde-core lxde tigervnc-standalone-server -y
 
         clear
         
